@@ -1,17 +1,15 @@
+import java.text.NumberFormat;
 import java.util.Arrays;
+import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Math.abs(-15));
-        System.out.println(Math.ceil(10.0001));
-        System.out.println(Math.floor(10.9999));
+        Locale locale = Locale.forLanguageTag("es-CL");
+        NumberFormat numberFormat = NumberFormat.getCurrencyInstance(locale);
+        String result = numberFormat.format(1099.90);
+        System.out.println(result);
 
-        System.out.println(Math.max(15, 25));
-        System.out.println(Math.min(15, 25));
-
-        System.out.println(Math.round(15.5));
-
-        double random = Math.random();
-        System.out.println((int)(random * 100));
+        NumberFormat porcentaje = NumberFormat.getPercentInstance();
+        System.out.println(porcentaje.format(0.15));
     }
 }
