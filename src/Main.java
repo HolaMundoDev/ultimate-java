@@ -1,15 +1,11 @@
-import java.text.NumberFormat;
-import java.util.Arrays;
-import java.util.Locale;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Locale locale = Locale.forLanguageTag("es-CL");
-        NumberFormat numberFormat = NumberFormat.getCurrencyInstance(locale);
-        String result = numberFormat.format(1099.90);
-        System.out.println(result);
-
-        NumberFormat porcentaje = NumberFormat.getPercentInstance();
-        System.out.println(porcentaje.format(0.15));
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingresa tu edad:");
+        Byte valor = scanner.nextByte();
+        System.out.println("Tu edad es:");
+        System.out.println(valor);
     }
 }
