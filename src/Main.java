@@ -1,19 +1,22 @@
-import java.util.Scanner;
+import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
-        /**
-         * Crear una calculadora que reciba
-         * 2 números y luego imprima el resultado de la
-         * suma de estos dos números
-         */
-        System.out.println("Esta es una aplicación de calculadora.");
-        System.out.println("Ingrese el primer número: ");
-        Scanner scanner = new Scanner(System.in);
-        int valorA = scanner.nextInt();
-        System.out.println("Ingrese el segundo número: ");
-        int valorB = scanner.nextInt();
-        System.out.println("El resultado de la suma es: ");
-        System.out.println(valorA + valorB);
+//        int a = 15;
+//        int b = a;
+//
+//        b = 33;
+//        System.out.println(a);
+
+//        Point point1 = new Point();
+//        Point point2 = point1;
+//
+//        point2.x = 15;
+//        System.out.println(point1);
+
+        String a = new String("Hola Mundo");
+        String b = a;
+        String c = a.toUpperCase();
+        System.out.println(c);
     }
 }
