@@ -1,7 +1,15 @@
-import java.awt.*;
-
 public class Main {
     public static void main(String[] args) {
-        var x = 45;
+        int a = 10;
+        int b = 10;
+
+        System.out.println(a == b);
+        System.out.println(a != b);
+
+        System.out.println(a > b);
+        System.out.println(a >= b);
+
+        System.out.println(a < b);
+        System.out.println(a <= b);
     }
 }
