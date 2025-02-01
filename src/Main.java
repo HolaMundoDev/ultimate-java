@@ -1,28 +1,21 @@
 public class Main {
     public static void main(String[] args) {
-        boolean a = true;
-        boolean b = false;
+        int edad = 18;
+        String movieClassification = "R18";
+//        String movieClassification = "RP18";
 
-        boolean c = a || b; // true
-        boolean d = a && b; // false
+        boolean isWithAdult = true;
+        boolean isRestricted = movieClassification.contains("R");
+//        boolean isRestricted = movieClassification.contains("RP");
 
-        System.out.println(c);
-        System.out.println(d);
-
-        boolean x = !a; // false
-        System.out.println(x);
-
-        boolean isAdult = true;
-        boolean isActive = false;
-        boolean isPremium = true;
-        boolean isON = true;
-
-        String coupon = "chanchito_feliz";
-
-        boolean promo = coupon.equals("ultimate_java") ||  coupon.equals("chanchito_feliz");
-
-        boolean hasFunds = true;
-
-        boolean canPurchase = isAdult && isActive && isPremium && isON && promo;
+        if(!isRestricted){
+            System.out.println("Puedes ver la película");
+        } else if (edad > 17) {
+            System.out.println("Puedes ver la película igual");
+        } else if (isWithAdult && movieClassification.contains("RP")) {
+            System.out.println("Viene con un adulto, puedes ver la película");
+        } else {
+            System.out.println("No puedes ver la película");
+        }
     }
 }
