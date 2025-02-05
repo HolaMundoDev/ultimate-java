@@ -1,8 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-        int edad = 18;
-        String mensaje = edad > 17 ? "Esta persona puede votar" : "Esta persona no puede votar";
+        String action = "listar";
 
-        System.out.println(mensaje);
+        switch (action){
+            case "agregar":
+                System.out.println("Agregando recurso");
+                break;
+            case "eliminar":
+                System.out.println("Eliminando recurso");
+                break;
+            default:
+                System.out.println("Acción por defecto");
+        }
     }
 }
