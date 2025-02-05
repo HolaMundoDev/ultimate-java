@@ -1,11 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        String mensaje = "Seco para programar";
+        int edad = 18;
+        String mensaje = edad > 17 ? "Esta persona puede votar" : "Esta persona no puede votar";
 
-        if(true){
-            mensaje = "Hola mundo";
-        }
         System.out.println(mensaje);
-        System.out.println("Fin de la aplicación");
     }
 }
