@@ -2,12 +2,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String[] textos = { "Hola mundo", "Usuario 1", "Chanchito feliz"};
+        int i = 0;
 
-        for(int i = 0; i < 5; i++){
+        while (i < 5) {
             System.out.println("Hola mundo " + i);
+            i++;
         }
 
-        System.out.println("Estamos fuera del for");
+        System.out.println("Saliendo del loop");
     }
 }
