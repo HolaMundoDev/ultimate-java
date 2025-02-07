@@ -1,16 +1,24 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        String action = "listar";
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese un número: ");
+        int numero = scanner.nextInt();
 
-        switch (action){
-            case "agregar":
-                System.out.println("Agregando recurso");
-                break;
-            case "eliminar":
-                System.out.println("Eliminando recurso");
-                break;
-            default:
-                System.out.println("Acción por defecto");
+        if(numero % 2 == 0){
+            System.out.println("El número es par");
+        } else {
+            System.out.println("El número es impar");
+        }
+
+
+        if (numero % 3 == 0 && numero % 4 == 0){
+            System.out.println("El número es divisible por 3 y por 4");
+        } else if (numero % 3 == 0){
+            System.out.println("El número es divisible por 3");
+        } else if (numero % 4 == 0) {
+            System.out.println("El número es divisible por 4");
         }
     }
 }
