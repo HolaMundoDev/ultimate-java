@@ -2,13 +2,15 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int i = 0;
+        Scanner scanner = new Scanner(System.in);
+        String input = "";
 
-        while (i < 5) {
-            System.out.println("Hola mundo " + i);
-            i++;
+        while (!input.equals("salir")) {
+            System.out.println("Ingresa comando: ");
+            input = scanner.next().toLowerCase();
+            System.out.println(input);
         }
 
-        System.out.println("Saliendo del loop");
+        System.out.println("Termino el loop.");
     }
 }
