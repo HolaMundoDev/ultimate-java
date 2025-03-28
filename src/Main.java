@@ -2,24 +2,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String input = "";
-        while (true) {
-            System.out.println("Ingresa un comando: ");
-            input = scanner.next().toLowerCase();
+        String[] personajes = {"Goku", "Vegeta", "Chanchito Feliz"};
 
-            if (input.equals("salir")){
-                break;
-            }
+//        for (int i = 0; i < personajes.length; i++){
+//            System.out.println(personajes[i]);
+//        }
 
-            if (input.equals("continuar")){
-                continue;
-            }
-
-            System.out.println("Esta línea no se debería ejecutar");
-
+        for(String personaje: personajes){
+            System.out.println(personaje);
         }
-        System.out.println("Termino el loop");
-
     }
 }
