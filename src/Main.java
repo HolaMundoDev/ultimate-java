@@ -2,21 +2,16 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int resultado = suma(12, 25, 45);
-        int resultado2 = suma(1,2);
-        System.out.println(resultado);
-
-        String texto = suma();
-    }
-    static int suma(int a, int b){
-        return a + b;
+        int r = suma(new int[] {1,2,3,4,5});
+        System.out.println(r);
     }
 
-    static int suma(int a, int b, int c){
-        return a + b + c;
-    }
+    static int suma(int[] numeros){
+        int resultado = 0;
+        for(int numero: numeros){
+            resultado += numero;
+        }
 
-    static  String suma(){
-        return "Hola mundo";
+        return resultado;
     }
 }
