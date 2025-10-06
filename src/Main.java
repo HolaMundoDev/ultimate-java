@@ -2,16 +2,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int r = suma(new int[] {1,2,3,4,5});
+        int r = suma(1, 2);
+        int c = 25;
         System.out.println(r);
     }
 
-    static int suma(int[] numeros){
-        int resultado = 0;
-        for(int numero: numeros){
-            resultado += numero;
-        }
+    static int suma(int a, int b){
+//        System.out.println(c); // Error
+//        lala(); Error
+        return a + b;
+    }
 
-        return resultado;
+    static void lala(){
+        suma(1,2);
     }
 }
