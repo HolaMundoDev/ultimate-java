@@ -8,7 +8,7 @@ public class Main {
         User user2 = new User();
         user2.name = "Felipe";
 
-        System.out.println(user.name);
-        System.out.println(user2.name);
+        System.out.println(user.id);
+        System.out.println(user2.id);
     }
 }
