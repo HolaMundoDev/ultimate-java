@@ -8,5 +8,7 @@ public class Main {
         System.out.println(pass);
         user.setPassword("13134545");
         System.out.println(user.getPassword());
+
+        User user2 = new User("Hola mundo", "chanchito@feliz.com");
     }
 }

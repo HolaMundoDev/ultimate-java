@@ -2,11 +2,17 @@ class User {
     static String tableName = "user";
     double id = Math.random();
     String name;
+    String email;
 
     private String password = "15&^%@#(aoeu";
 
     User(String name){
         this.name = name;
+    }
+
+    User(String name, String email){
+        this.name = name;
+        this.email = name;
     }
 
     public void login(){
