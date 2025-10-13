@@ -3,5 +3,10 @@ public class Main {
         User user = new User("Nicolas");
 
         user.login();
+
+        String pass = user.getPassword();
+        System.out.println(pass);
+        user.setPassword("13134545");
+        System.out.println(user.getPassword());
     }
 }
