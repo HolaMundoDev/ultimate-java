@@ -9,4 +9,8 @@ class User {
     public void saludar(){
         System.out.println("Hola mundo! soy " + tableName);
     }
+
+    public static void guardar(User u){
+        System.out.println("Guardando usuario " + u.name);
+    }
 }
