@@ -2,23 +2,18 @@ class User {
     static String tableName = "user";
     double id = Math.random();
     String name;
-    private int edad;
 
-    User(String name, int edad){
+    private String password = "123456";
+
+    User(String name){
         this.name = name;
-        this.edad = edad;
-    }
-    public int saludar(){
-        System.out.println("Hola mundo! soy " + tableName);
-        System.out.println(this.edad);
-
-        int edad = this.metodoPrivado();
-
-        return edad;
     }
 
-    private int metodoPrivado(){
-        System.out.println("Procesando datos...");
-        return this.edad;
+    public void login(){
+        System.out.println("LLamando a base de datos");
+    }
+
+    private void validatePassword(){
+        System.out.println("Verificar contraseña");
     }
 }
