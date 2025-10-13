@@ -2,15 +2,23 @@ class User {
     static String tableName = "user";
     double id = Math.random();
     String name;
+    private int edad;
 
-    User(String name){
+    User(String name, int edad){
         this.name = name;
+        this.edad = edad;
     }
-    public void saludar(){
+    public int saludar(){
         System.out.println("Hola mundo! soy " + tableName);
+        System.out.println(this.edad);
+
+        int edad = this.metodoPrivado();
+
+        return edad;
     }
 
-    public static void guardar(User u){
-        System.out.println("Guardando usuario " + u.name);
+    private int metodoPrivado(){
+        System.out.println("Procesando datos...");
+        return this.edad;
     }
 }
