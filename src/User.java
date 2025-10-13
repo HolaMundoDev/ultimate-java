@@ -1,4 +1,5 @@
 class User {
+    static String tableName = "user";
     double id = Math.random();
     String name;
 
@@ -6,6 +7,6 @@ class User {
         this.name = name;
     }
     public void saludar(){
-        System.out.println("Hola mundo! soy " + this.name);
+        System.out.println("Hola mundo! soy " + tableName);
     }
 }
