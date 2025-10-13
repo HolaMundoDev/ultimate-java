@@ -26,4 +26,8 @@ class User {
         String encryptedPassword = password;
         this.password = encryptedPassword;
     }
+
+    public void setPassword(String password, String encryption){
+        System.out.println("Encriptar la contraseña con el encriptado");
+    }
 }
