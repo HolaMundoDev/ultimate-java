@@ -5,6 +5,16 @@ public class VideoGame {
     double price;
     String category;
 
+    VideoGame(String name, double price){
+        this.name = name;
+        if(price < 10){
+            this.price = 10;
+        } else{
+            this.price = price;
+        }
+
+    }
+
 
     public String getName(){
         return this.name;

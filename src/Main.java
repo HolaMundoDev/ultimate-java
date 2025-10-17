@@ -10,10 +10,15 @@ public class Main {
          * fetters y setters para toda las propiedades
          */
 
-        VideoGame vg = new VideoGame();
+//        VideoGame vg = new VideoGame("God of war", 5);
+        VideoGame vg = new VideoGame("God of war", 25);
+
         vg.setName("God of war");
 //        vg.setCategory("Chanchito feliz");
         vg.setCategory("action");
         System.out.println(vg.getCategory());
+
+        System.out.println(vg.getName());
+        System.out.println(vg.getPrice());
     }
 }
