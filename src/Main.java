@@ -4,7 +4,12 @@ import recursos.Categorias;
 public class Main {
     public static void main(String[] args) {
         Categorias c = new Categorias("Telefónos");
-        System.out.println(c.miMetodo());
+        Base base = new Base("Base");
+
+        miMetodo(c);
     }
 
+    public static void miMetodo(Base base){
+        System.out.println(base.getName());
+    }
 }
