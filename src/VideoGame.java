@@ -1,3 +1,5 @@
+import java.text.NumberFormat;
+
 public class VideoGame {
     // action, rpg, adventure y racing. Propiedad static.
     static String[] categories = { "action", "rpg", "adventure", "racing"};
@@ -24,8 +26,9 @@ public class VideoGame {
         this.name = name;
     }
 
-    public double getPrice(){
-        return this.price;
+    public String getPrice(){
+        NumberFormat nf = NumberFormat.getCurrencyInstance();
+        return nf.format(this.price);
     }
 
     public void setPrice(double price){
