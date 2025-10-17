@@ -17,4 +17,14 @@ public class Categorias extends Base {
     public void metodoCategoria(){
         System.out.println("Soy instancia de categoría");
     }
+
+//    @Override
+//    public boolean equals(Object obj){
+//        return false;
+//    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 }
