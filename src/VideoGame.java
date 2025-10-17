@@ -1,7 +1,10 @@
 public class VideoGame {
+    // action, rpg, adventure y racing. Propiedad static.
+    static String[] categories = { "action", "rpg", "adventure", "racing"};
     String name;
     double price;
     String category;
+
 
     public String getName(){
         return this.name;
@@ -24,6 +27,19 @@ public class VideoGame {
     }
 
     public void setCategory(String category){
-        this.category = category;
+        boolean isInList = false;
+
+        for(String c: VideoGame.categories){
+            if (c.equals(category)) {
+                isInList = true;
+                break;
+            }
+        }
+
+        if(isInList){
+            this.category = category;
+        } else {
+            System.out.println("No está :(");
+        }
     }
 }

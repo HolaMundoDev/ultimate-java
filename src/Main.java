@@ -12,6 +12,8 @@ public class Main {
 
         VideoGame vg = new VideoGame();
         vg.setName("God of war");
-        System.out.println(vg.getName());
+//        vg.setCategory("Chanchito feliz");
+        vg.setCategory("action");
+        System.out.println(vg.getCategory());
     }
 }
