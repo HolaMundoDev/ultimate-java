@@ -1,11 +1,10 @@
 package recursos;
 
 public class Base {
-//    protected String name; NO USAR PROTECTED
     String name;
 
-    public Base(String x){
-        System.out.println("Soy Base " + x);
+    public Base(String name){
+        this.name = name;
     }
 
     public String getName(){
@@ -14,5 +13,9 @@ public class Base {
 
     public void setName(String name){
         this.name = name;
+    }
+
+    public String miMetodo(){
+        return "Hola mundo";
     }
 }

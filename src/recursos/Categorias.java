@@ -1,10 +1,15 @@
 package recursos;
 
 public class Categorias extends Base {
-    public Categorias(){
-        super("Hola Mundo");
+    public Categorias(String name){
+        super(name);
         System.out.println("Soy categorias");
-//        Base b = new Base("Hola Mundo");
-//        b.name
+    }
+    public String toString(){
+        return this.name;
+    }
+
+    public String miMetodo(){
+        return "Chao mundo";
     }
 }
