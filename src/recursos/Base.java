@@ -1,7 +1,8 @@
 package recursos;
 
 public class Base {
-    public String name;
+//    protected String name; NO USAR PROTECTED
+    String name;
 
     public Base(String x){
         System.out.println("Soy Base " + x);
