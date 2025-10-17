@@ -23,7 +23,7 @@ public class VideoGame {
     }
 
     public String getCategory(){
-        return this.category;
+        return this.category.toUpperCase() + ".";
     }
 
     public void setCategory(String category){
