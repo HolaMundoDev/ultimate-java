@@ -13,4 +13,8 @@ public class Categorias extends Base {
         String saludo = super.miMetodo();
         return "Chao mundo " + saludo;
     }
+
+    public void metodoCategoria(){
+        System.out.println("Soy instancia de categoría");
+    }
 }
