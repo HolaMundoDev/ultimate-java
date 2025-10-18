@@ -26,4 +26,8 @@ public class Categorias extends Base {
         var c = (Categorias)obj;
         return Objects.equals(this.name, c.name);
     }
+
+    public void guardar(){
+        System.out.println("Guardando categoria");
+    }
 }

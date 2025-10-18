@@ -18,4 +18,7 @@ public class Base {
     public String miMetodo(){
         return "Hola mundo";
     }
+
+    public void guardar(){
+    }
 }
