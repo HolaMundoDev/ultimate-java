@@ -6,7 +6,9 @@ public class Main {
         Garzon g2 = new Garzon();
         Garzon g3 = new Garzon();
         Cocinero c = new Cocinero();
-        Restaurante r = new Restaurante(new Atendible[]{g1, g2, g3, c});
+
+        Restaurante r = new Restaurante();
+        r.setGarzones(new Atendible[]{g1, g2, g3, c}));
 
         r.llevarCervezas();
         Cocinable cs = new Cocinero();
