@@ -1,5 +1,7 @@
 package recursos;
 
+import java.util.Objects;
+
 public class Categorias extends Base {
     public Categorias(String name){
         super(name);
@@ -18,13 +20,10 @@ public class Categorias extends Base {
         System.out.println("Soy instancia de categoría");
     }
 
-//    @Override
-//    public boolean equals(Object obj){
-//        return false;
-//    }
-
     @Override
     public boolean equals(Object obj) {
-        return super.equals(obj);
+        if(!(obj instanceof Categorias)) return super.equals(obj);
+        var c = (Categorias)obj;
+        return Objects.equals(this.name, c.name);
     }
 }
