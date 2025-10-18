@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Categorias c = new Categorias("Telefónos");
         Productos p = new Productos("iPhone");
+//        Base b = new Base("Hola mundo");
         Base[] recursos = { c, p };
         guardarRecursos(recursos);
     }

@@ -1,6 +1,6 @@
 package recursos;
 
-public class Base {
+public abstract class Base {
     String name;
 
     public Base(String name){
@@ -19,6 +19,5 @@ public class Base {
         return "Hola mundo";
     }
 
-    public void guardar(){
-    }
+    public abstract void guardar();
 }
