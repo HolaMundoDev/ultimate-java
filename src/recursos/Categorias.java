@@ -11,10 +11,10 @@ public class Categorias extends Base {
         return this.name;
     }
 
-    public String miMetodo(){
-        String saludo = super.miMetodo();
-        return "Chao mundo " + saludo;
-    }
+//    public String miMetodo(){
+//        String saludo = super.miMetodo();
+//        return "Chao mundo " + saludo;
+//    }
 
     public void metodoCategoria(){
         System.out.println("Soy instancia de categoría");

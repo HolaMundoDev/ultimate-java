@@ -15,7 +15,7 @@ public abstract class Base {
         this.name = name;
     }
 
-    public String miMetodo(){
+    public final String miMetodo(){
         return "Hola mundo";
     }
 
