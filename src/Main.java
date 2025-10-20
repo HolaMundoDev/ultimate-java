@@ -1,4 +1,5 @@
 import genericos.Garzon;
+import genericos.Utils;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,5 +9,8 @@ public class Main {
         if(g1.compareTo(g2) < 0){
             System.out.println("g2 es mayor");
         }
+
+        var r = Utils.max(1,15);
+        System.out.println("r = " + r);
     }
 }
