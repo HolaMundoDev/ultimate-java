@@ -2,13 +2,10 @@ import genericos.Lista;
 
 public class Main {
     public static void main(String[] args) {
-//        Lista<String> lista = new Lista<>();
-//        lista.add("Hola mundo");
-//        lista.add("Felipe");
-        Lista<Integer> lista = new Lista<>();
-        lista.add(12);
-        lista.add(32);
+        Lista<Float> lista = new Lista<>();
+        lista.add(12f);
+        lista.add(32f);
 
-        var elemento = lista.get(1);
+        float elemento = lista.get(1);
     }
 }
