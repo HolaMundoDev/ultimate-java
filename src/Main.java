@@ -1,21 +1,14 @@
-import java.util.ArrayList;
-import java.util.Arrays;
+import genericos.Lista;
 
 public class Main {
     public static void main(String[] args) {
-        var numerosEnString = new String[]{"1", "2"};
-        var textos = new ArrayList<String>();
-        textos.addAll(Arrays.asList(numerosEnString));
-        textos.add("Chanchito Feliz");
-        textos.add("Felipe");
-//        textos.add(1);
-        var primer = textos.getFirst();
-        var ultimo = textos.getLast();
+//        Lista<String> lista = new Lista<>();
+//        lista.add("Hola mundo");
+//        lista.add("Felipe");
+        Lista<Integer> lista = new Lista<>();
+        lista.add(12);
+        lista.add(32);
 
-        var el = textos.get(0);
-
-        System.out.println("textos = " + textos);
-        System.out.println("ultimo = " + ultimo);
-        System.out.println("primer = " + primer);
+        var elemento = lista.get(1);
     }
 }
