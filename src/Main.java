@@ -1,18 +1,12 @@
 import genericos.Garzon;
-import genericos.Lista;
-import genericos.Pairs;
 
 public class Main {
     public static void main(String[] args) {
-        Lista<Garzon> lista = new Lista<>();
-        lista
-            .add(new Garzon())
-            .add(new Garzon());
+        Garzon g1 = new Garzon(1);
+        Garzon g2 = new Garzon(2);
 
-        Garzon elemento = lista.get(1);
-
-        Pairs<Integer, String> p = new Pairs<>(1, "Chanchito feliz");
-        var key = p.getKey();
-        var value = p.getValue();
+        if(g1.compareTo(g2) < 0){
+            System.out.println("g2 es mayor");
+        }
     }
 }
