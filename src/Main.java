@@ -1,16 +1,21 @@
-import recursos.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        Garzon g1 = new Garzon();
-        Garzon g2 = new Garzon();
-        Garzon g3 = new Garzon();
-        Cocinero c = new Cocinero();
+        var numerosEnString = new String[]{"1", "2"};
+        var textos = new ArrayList<String>();
+        textos.addAll(Arrays.asList(numerosEnString));
+        textos.add("Chanchito Feliz");
+        textos.add("Felipe");
+//        textos.add(1);
+        var primer = textos.getFirst();
+        var ultimo = textos.getLast();
 
-        Restaurante r = new Restaurante();
-        r.setGarzones(new Atendible[]{g1, g2, g3, c}));
+        var el = textos.get(0);
 
-        r.llevarCervezas();
-        Cocinable cs = new Cocinero();
+        System.out.println("textos = " + textos);
+        System.out.println("ultimo = " + ultimo);
+        System.out.println("primer = " + primer);
     }
 }
