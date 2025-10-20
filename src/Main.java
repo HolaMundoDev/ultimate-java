@@ -2,9 +2,9 @@ import genericos.Lista;
 
 public class Main {
     public static void main(String[] args) {
-        Lista<Float> lista = new Lista<>();
-        lista.add(12f);
-        lista.add(32f);
+        Lista<Integer> lista = new Lista<>();
+        lista.add(12);
+        lista.add(32);
 
         float elemento = lista.get(1);
     }
