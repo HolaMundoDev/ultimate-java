@@ -1,11 +1,12 @@
+import genericos.Garzon;
 import genericos.Lista;
 
 public class Main {
     public static void main(String[] args) {
-        Lista<Integer> lista = new Lista<>();
-        lista.add(12);
-        lista.add(32);
+        Lista<Garzon> lista = new Lista<>();
+        lista.add(new Garzon());
+        lista.add(new Garzon());
 
-        float elemento = lista.get(1);
+        Garzon elemento = lista.get(1);
     }
 }
