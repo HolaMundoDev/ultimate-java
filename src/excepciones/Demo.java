@@ -28,7 +28,8 @@ public class Demo {
         }
      }
 
-     public static void comprobado(){
+
+    public static void comprobado(){
          try (
                  FileReader fr = new FileReader("archivo.txt");
                  FileReader fr2 = new FileReader("archivo.txt");
@@ -39,5 +40,11 @@ public class Demo {
              System.out.println("Archivo no existe");
          }
          System.out.println("App continua...");
-     }
+    }
+
+    public static void  verificarEdad(int edad) throws IOException {
+        if(edad < 0){
+            throw new IOException("La edad debe ser positiva");
+        }
+    }
 }
