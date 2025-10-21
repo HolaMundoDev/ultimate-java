@@ -1,13 +1,14 @@
 import excepciones.Demo;
 
-import java.io.IOException;
-
 public class Main {
     public static void main(String[] args) {
         try {
             Demo.start();
         } catch (Throwable e) {
-            System.out.println("Ocurrio un error " + e.getMessage());
+//            e.printStackTrace();
+            var cause = e.getCause();
+            cause.printStackTrace();
+//            System.out.println("Ocurrio un error " + e.getMessage());
         }
     }
 }

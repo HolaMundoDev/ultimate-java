@@ -42,16 +42,25 @@ public class Demo {
          System.out.println("App continua...");
     }
 
-    public static void  verificarEdad(int edad) throws EdadInvalidaException {
+//    public static void  verificarEdad(int edad) throws UserException {
+//        if(edad < 0){
+//            UserException ue = new UserException();
+//            EdadInvalidaException ei = new EdadInvalidaException();
+//            ue.initCause(ei);
+//            throw ue;
+//        }
+//    }
+
+    public static void  verificarEdad(int edad) throws UserException {
         if(edad < 0){
-            throw new EdadInvalidaException("La edad debe ser positiva");
+            throw new UserException(new EdadInvalidaException());
         }
     }
 
-    public static  void start() throws EdadInvalidaException {
+    public static  void start() throws UserException {
         try {
             verificarEdad(-1);
-        } catch (EdadInvalidaException e) {
+        } catch (UserException e) {
             System.out.println("Error verificando edad");
             throw e;
         }
