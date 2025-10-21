@@ -3,6 +3,7 @@ package excepciones;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 
 public class Demo {
     public static void suma(){
@@ -33,10 +34,14 @@ public class Demo {
      public static void comprobado(){
          try {
              FileReader fr = new FileReader("archivo_inexistente.txt");
-         } catch (FileNotFoundException e) {
+             var x = 10 / 0;
+         } catch (FileNotFoundException | ArithmeticException e) {
              e.printStackTrace();
-             System.out.println("Archivo no existe");
+             System.out.println("Archivo no existe o dividiste por cero");
          }
+//         catch (IOException e) {
+//             System.out.println("No puede leer el archivo");
+//         }
 
          System.out.println("App continua...");
      }
