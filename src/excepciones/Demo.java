@@ -42,16 +42,16 @@ public class Demo {
          System.out.println("App continua...");
     }
 
-    public static void  verificarEdad(int edad) throws IOException {
+    public static void  verificarEdad(int edad) throws EdadInvalidaException {
         if(edad < 0){
-            throw new IOException("La edad debe ser positiva");
+            throw new EdadInvalidaException("La edad debe ser positiva");
         }
     }
 
-    public static  void start() throws IOException {
+    public static  void start() throws EdadInvalidaException {
         try {
             verificarEdad(-1);
-        } catch (IOException e) {
+        } catch (EdadInvalidaException e) {
             System.out.println("Error verificando edad");
             throw e;
         }

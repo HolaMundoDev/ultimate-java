@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             Demo.start();
-        } catch (IOException e) {
+        } catch (Throwable e) {
             System.out.println("Ocurrio un error " + e.getMessage());
         }
     }
