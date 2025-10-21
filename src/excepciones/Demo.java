@@ -47,4 +47,13 @@ public class Demo {
             throw new IOException("La edad debe ser positiva");
         }
     }
+
+    public static  void start() throws IOException {
+        try {
+            verificarEdad(-1);
+        } catch (IOException e) {
+            System.out.println("Error verificando edad");
+            throw e;
+        }
+    }
 }
