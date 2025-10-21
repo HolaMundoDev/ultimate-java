@@ -1,6 +1,6 @@
 package colecciones;
-
 import java.util.Iterator;
+
 
 public class Lista<T> implements Iterable<T> {
     private T[] data = (T[]) new Object[50];
@@ -18,6 +18,24 @@ public class Lista<T> implements Iterable<T> {
 
     @Override
     public Iterator<T> iterator() {
-        return null;
+        return new ListaIterator(this);
+    }
+
+    private class ListaIterator implements Iterator<T>{
+        private Lista<T> lista;
+        private int index;
+        public ListaIterator(Lista<T> lista){
+            this.lista  = lista;
+        }
+
+        @Override
+        public boolean hasNext() {
+            return this.index < this.lista.length;
+        }
+
+        @Override
+        public T next() {
+            return this.lista.data[this.index++];
+        }
     }
 }
