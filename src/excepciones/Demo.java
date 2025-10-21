@@ -1,5 +1,9 @@
 package excepciones;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
 public class Demo {
     public static void suma(){
         sumando(null);
@@ -24,5 +28,16 @@ public class Demo {
             return -1;
 
         }
+     }
+
+     public static void comprobado(){
+         try {
+             FileReader fr = new FileReader("archivo_inexistente.txt");
+         } catch (FileNotFoundException e) {
+             e.printStackTrace();
+             System.out.println("Archivo no existe");
+         }
+
+         System.out.println("App continua...");
      }
 }
