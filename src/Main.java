@@ -41,6 +41,7 @@ public class Main {
 //        Collections.sort(lista, new EdadComparator());
 //        System.out.println(lista);
 //        EjemploSet.run();
-        DemoDeque.run();
+//        DemoDeque.run();
+        EjemploMap.map();
     }
 }
