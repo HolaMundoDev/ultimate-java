@@ -1,4 +1,5 @@
 
+import colecciones.EjemploComparable;
 import colecciones.Lista;
 import colecciones.MiColeccion;
 
@@ -21,18 +22,28 @@ public class Main {
 //            System.out.println("Iterando... " + elemento);
 //        }
 
-        List<Integer> lista = new ArrayList<>();
-        Collections.addAll(lista, 1,2,3,4,50);
+//        List<Integer> lista = new ArrayList<>();
+//        Collections.addAll(lista, 1,2,3,4,50);
+//
+//        var elemento = lista.get(2);
+//        lista.set(2, 50);
+//
+//        System.out.println(lista.indexOf(50));
+//        System.out.println(lista.indexOf(49));
+//
+//        System.out.println(lista.lastIndexOf(50));
+//
+//        System.out.println(lista.subList(0, 3));
+//        System.out.println(lista);
 
-        var elemento = lista.get(2);
-        lista.set(2, 50);
+        List<EjemploComparable> lista = new ArrayList<EjemploComparable>();
+        EjemploComparable e2 = new EjemploComparable("Felipe");
+        EjemploComparable e1 = new EjemploComparable("Chanchito Feliz");
 
-        System.out.println(lista.indexOf(50));
-        System.out.println(lista.indexOf(49));
+        lista.add(e1);
+        lista.add(e2);
 
-        System.out.println(lista.lastIndexOf(50));
-
-        System.out.println(lista.subList(0, 3));
+        Collections.sort(lista);
         System.out.println(lista);
     }
 }
