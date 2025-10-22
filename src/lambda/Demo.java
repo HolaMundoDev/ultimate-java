@@ -1,17 +1,22 @@
 package lambda;
 
 public class Demo {
-    public static void run(){
-        push(new Notificable() {
-            @Override
-            public void push(String message) {
-                System.out.println("Enviando desde clase anónima: " + message);
-            }
-        });
+    private static String texto = "Imprimiendo de lambda: ";
+//    private String texto = "Imprimiendo de lambda: ";
+    private static Notificable lambda = message ->
+        System.out.println(texto + message);
 
-        push(message ->
-            System.out.println("Imprimiendo de lambda " + message)
-        );
+    public static void run(){
+//        var texto = "Imprimiendo de lambda: ";
+//        Notificable lambda = message ->
+//            System.out.println(texto + message);
+//        ;
+
+//        Notificable lambda = message -> {
+//                var texto = "Imprimiendo de lambda: ";
+//                System.out.println(texto + message);
+//        };
+        push(lambda);
     }
 
     public static void push(Notificable n){
