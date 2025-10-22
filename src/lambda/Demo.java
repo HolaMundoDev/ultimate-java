@@ -1,10 +1,10 @@
 package lambda;
 
 import java.time.LocalDate;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 public class Demo {
@@ -62,6 +62,15 @@ public class Demo {
                 .apply(10);
 
         System.out.println(y);
+
+        Predicate<String> masDeTres = x -> x.length() > 3;
+        var resultado = masDeTres.test("chanchitofeliz");
+        System.out.println("resultado = " + resultado);
+
+        List<String> miLista = new ArrayList<>();
+        Collections.addAll(miLista,"Felipe", "Chanchito", "ac");
+        var filtrado = miLista.stream().filter(masDeTres);
+        System.out.println("filtrado = " + filtrado.toList());
     }
 
     public static void push(Notificable n){
