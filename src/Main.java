@@ -1,8 +1,5 @@
 
-import colecciones.EdadComparator;
-import colecciones.EjemploComparable;
-import colecciones.Lista;
-import colecciones.MiColeccion;
+import colecciones.*;
 
 import java.util.*;
 
@@ -34,14 +31,15 @@ public class Main {
 //        System.out.println(lista.subList(0, 3));
 //        System.out.println(lista);
 
-        List<EjemploComparable> lista = new ArrayList<EjemploComparable>();
-        EjemploComparable e2 = new EjemploComparable("Felipe", 15);
-        EjemploComparable e1 = new EjemploComparable("Chanchito Feliz", 22);
-
-        lista.add(e1);
-        lista.add(e2);
-
-        Collections.sort(lista, new EdadComparator());
-        System.out.println(lista);
+//        List<EjemploComparable> lista = new ArrayList<EjemploComparable>();
+//        EjemploComparable e2 = new EjemploComparable("Felipe", 15);
+//        EjemploComparable e1 = new EjemploComparable("Chanchito Feliz", 22);
+//
+//        lista.add(e1);
+//        lista.add(e2);
+//
+//        Collections.sort(lista, new EdadComparator());
+//        System.out.println(lista);
+        EjemploSet.run();
     }
 }
