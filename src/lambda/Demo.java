@@ -1,6 +1,7 @@
 package lambda;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class Demo {
     private static String texto = "Imprimiendo de lambda: ";
@@ -29,9 +30,12 @@ public class Demo {
     public static void incluidas(){
         List<String> l = List.of("Hola", "Mundo");
 
-//        l.forEach(el -> System.out.println(el));
-//        l.forEach(System.out::println);
-        l.forEach(Demo::sendPush);
+//        l.forEach(Demo::sendPush);
+
+        Consumer<String> notify = el -> System.out.println("Enviando a: " + el);
+        Consumer<String> store = el -> System.out.println("Guardando: " + el);
+
+        l.forEach(notify.andThen(store));
     }
 
     public static void push(Notificable n){
