@@ -8,6 +8,10 @@ public class Demo {
                 System.out.println("Enviando desde clase anónima: " + message);
             }
         });
+
+        push(message ->
+            System.out.println("Imprimiendo de lambda " + message)
+        );
     }
 
     public static void push(Notificable n){
