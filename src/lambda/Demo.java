@@ -48,7 +48,19 @@ public class Demo {
         System.out.println(ahora.get());
 
         Function<Integer, Double> mitad = x -> x / 2.0;
-        var y = mitad.apply(10);
+        Function<Double, Double> aumenta = x -> x + 2;
+
+        var y = mitad
+//                .andThen(aumenta)
+                .andThen(x -> x + 2)
+                .andThen(x -> x * 5)
+                .apply(10);
+
+        y = mitad
+                .compose((Integer x) -> x + 2)
+                .compose((Integer x) -> x * 5)
+                .apply(10);
+
         System.out.println(y);
     }
 
