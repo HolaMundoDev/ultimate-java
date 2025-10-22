@@ -2,9 +2,11 @@ package colecciones;
 
 public class EjemploComparable implements Comparable<EjemploComparable> {
     private String nombre;
+    private Integer edad;
 
-    public EjemploComparable(String nombre){
+    public EjemploComparable(String nombre, Integer edad){
         this.nombre = nombre;
+        this.edad = edad;
     }
 
     @Override
@@ -15,5 +17,9 @@ public class EjemploComparable implements Comparable<EjemploComparable> {
     @Override
     public String toString() {
         return this.nombre;
+    }
+
+    public Integer getEdad() {
+        return this.edad;
     }
 }

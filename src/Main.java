@@ -3,10 +3,7 @@ import colecciones.EjemploComparable;
 import colecciones.Lista;
 import colecciones.MiColeccion;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 
 public class Main {
@@ -37,13 +34,18 @@ public class Main {
 //        System.out.println(lista);
 
         List<EjemploComparable> lista = new ArrayList<EjemploComparable>();
-        EjemploComparable e2 = new EjemploComparable("Felipe");
-        EjemploComparable e1 = new EjemploComparable("Chanchito Feliz");
+        EjemploComparable e2 = new EjemploComparable("Felipe", 30);
+        EjemploComparable e1 = new EjemploComparable("Chanchito Feliz", 22);
 
         lista.add(e1);
         lista.add(e2);
 
-        Collections.sort(lista);
+        Collections.sort(lista, new Comparator<EjemploComparable>() {
+            @Override
+            public int compare(EjemploComparable o1, EjemploComparable o2) {
+                return o1.getEdad().compareTo(o2.getEdad().intValue());
+            }
+        });
         System.out.println(lista);
     }
 }
