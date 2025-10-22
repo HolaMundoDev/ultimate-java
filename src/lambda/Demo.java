@@ -1,7 +1,10 @@
 package lambda;
 
+import java.time.LocalDate;
 import java.util.List;
+import java.util.Locale;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 public class Demo {
     private static String texto = "Imprimiendo de lambda: ";
@@ -36,6 +39,12 @@ public class Demo {
         Consumer<String> store = el -> System.out.println("Guardando: " + el);
 
         l.forEach(notify.andThen(store));
+
+//        Supplier<LocalDate> ahora = () -> LocalDate.now();
+        Supplier<LocalDate> ahora = LocalDate::now;
+        LocalDate ahora2 = LocalDate.now();
+
+        System.out.println(ahora.get());
     }
 
     public static void push(Notificable n){
