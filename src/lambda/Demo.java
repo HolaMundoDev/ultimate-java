@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Locale;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class Demo {
@@ -45,6 +46,10 @@ public class Demo {
         LocalDate ahora2 = LocalDate.now();
 
         System.out.println(ahora.get());
+
+        Function<Integer, Double> mitad = x -> x / 2.0;
+        var y = mitad.apply(10);
+        System.out.println(y);
     }
 
     public static void push(Notificable n){
