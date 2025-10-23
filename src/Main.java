@@ -1,7 +1,7 @@
-import streams.Slice;
+import streams.Sort;
 
 public class Main {
     public static void main(String[] args) {
-        Slice.run();
+        Sort.run();
     }
 }
