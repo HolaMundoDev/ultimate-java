@@ -31,6 +31,22 @@ public class Demo {
         push(Demo::new);
     }
 
+    public static void combinacion(){
+        Predicate<String> tieneAt = s -> s.contains("@");
+        Predicate<String> minSeis = s -> s.length() > 5;
+        Predicate<String> dominioTienePunto = s -> {
+            var at = s.indexOf("@");
+            if(at == -1)return false;
+
+            var dominio = s.substring(at);
+            System.out.println("dominio = " + dominio);
+            return dominio.indexOf(".") > 1 && dominio.length() > 4;
+        };
+
+        var nuevoPredicate = tieneAt.and(minSeis).and(dominioTienePunto);
+        System.out.println("nuevoPredicate.test(\"holamundo@x.co\") = " + nuevoPredicate.test("holamundo@x.co"));
+    }
+
     public static void incluidas(){
         List<String> l = List.of("Hola", "Mundo");
 
