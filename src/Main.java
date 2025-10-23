@@ -1,7 +1,7 @@
-import streams.DemoMap;
+import streams.Slice;
 
 public class Main {
     public static void main(String[] args) {
-        DemoMap.flatmap();
+        Slice.run();
     }
 }
