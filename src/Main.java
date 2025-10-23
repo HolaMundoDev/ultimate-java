@@ -1,7 +1,7 @@
-import streams.Sort;
+import streams.Duplicates;
 
 public class Main {
     public static void main(String[] args) {
-        Sort.run();
+        Duplicates.run();
     }
 }
