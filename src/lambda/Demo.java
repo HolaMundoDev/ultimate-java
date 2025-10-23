@@ -2,10 +2,7 @@ package lambda;
 
 import java.time.LocalDate;
 import java.util.*;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 
 public class Demo {
     private static String texto = "Imprimiendo de lambda: ";
@@ -87,6 +84,15 @@ public class Demo {
         Collections.addAll(miLista,"Felipe", "Chanchito", "ac");
         var filtrado = miLista.stream().filter(masDeTres);
         System.out.println("filtrado = " + filtrado.toList());
+    }
+
+    public static void unaryAndBinary(){
+        Function<Integer, Integer> inc = (a) -> a + 2;
+        UnaryOperator<Integer> inc2 = (a) -> a + 2;
+
+        BinaryOperator<Integer> potencia = (a,b) -> (int) Math.pow(a, b);
+        var r = potencia.apply(3,3);
+        System.out.println("r = " + r);
     }
 
     public static void push(Notificable n){
