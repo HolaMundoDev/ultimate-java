@@ -13,7 +13,9 @@ public class Duplicates {
 
         users.stream()
                 .map(x -> x.email)
+                .peek(x -> System.out.println(x))
                 .distinct()
+                .peek(x -> System.out.println(x))
                 .forEach(System.out::println);
     }
 }
