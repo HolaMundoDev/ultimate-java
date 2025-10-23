@@ -1,7 +1,7 @@
-import streams.Duplicates;
+import streams.Reducers;
 
 public class Main {
     public static void main(String[] args) {
-        Duplicates.run();
+        Reducers.comun();
     }
 }
