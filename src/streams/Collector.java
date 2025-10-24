@@ -35,4 +35,17 @@ public class Collector {
 
         System.out.println(particion.get(false));
     }
+
+    public static void  grouping(){
+        List<User> users = List.of(
+                new User(14, "chanchito@holamundo.io", Mandos.MEDIO),
+                new User(10, "felipe@holamundo.io", Mandos.MEDIO),
+                new User(22, "gabriel@holamundo.io", Mandos.ALTO)
+        );
+
+        var groupedByMando = users.stream()
+                .collect(Collectors.groupingBy(x -> x.mando));
+
+        System.out.println("groupedByMando = " + groupedByMando);
+    }
 }
