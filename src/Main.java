@@ -1,7 +1,7 @@
-import streams.Reducers;
+import streams.Collector;
 
 public class Main {
     public static void main(String[] args) {
-        Reducers.comun();
+        Collector.run();
     }
 }
