@@ -2,6 +2,6 @@ import streams.Collector;
 
 public class Main {
     public static void main(String[] args) {
-        Collector.run();
+        Collector.particionado();
     }
 }
